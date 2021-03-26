@@ -70,34 +70,34 @@ function NavBar() {
               <MenuRounded />
             </IconButton>
             <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
-              <MenuItem dense onClick={handleClose} component={Link} to="/home">Home</MenuItem>
-              <MenuItem dense onClick={handleClose} component={Link} to="/about-me">About Me</MenuItem>
-              <MenuItem dense onClick={handleClose} component={Link} to="/projects">Projects</MenuItem>
-              <MenuItem dense onClick={handleClose} component={Link} to="/resume">Resume</MenuItem>
+              <MenuItem dense onClick={handleClose} component={Link} to="/portfolio/home">Home</MenuItem>
+              <MenuItem dense onClick={handleClose} component={Link} to="/portfolio/about-me">About Me</MenuItem>
+              <MenuItem dense onClick={handleClose} component={Link} to="/portfolio/projects">Projects</MenuItem>
+              <MenuItem dense onClick={handleClose} component={Link} to="/portfolio/resume">Resume</MenuItem>
             </Menu>
           </>
         :
           <Box p={2} className={classes.root}>
-            <Typography className={classes.link} variant="button" component={Link} to="/home">Home</Typography>
-            <Typography className={classes.link} variant="button" component={Link} to="/about-me">About Me</Typography>
-            <Typography className={classes.link} variant="button" component={Link} to="/projects">Projects</Typography>
-            <Typography className={classes.link} style={{ marginRight: 100 }} variant="button" component={Link} to="/resume">Resume</Typography>
+            <Typography className={classes.link} variant="button" component={Link} to="/portfolio/home">Home</Typography>
+            <Typography className={classes.link} variant="button" component={Link} to="/portfolio/about-me">About Me</Typography>
+            <Typography className={classes.link} variant="button" component={Link} to="/portfolio/projects">Projects</Typography>
+            <Typography className={classes.link} style={{ marginRight: 100 }} variant="button" component={Link} to="/portfolio/resume">Resume</Typography>
           </Box>
         }
 
         <div className={classes.scroll}>
           <Switch>
-            <Route exact path="/" render={() => (<Redirect exact from="/" to="/home" />)} /> 
-            <Route exact path="/home">
+            <Route exact path="/portfolio" render={() => (<Redirect exact from="/portfolio" to="/portfolio/home" />)} /> 
+            <Route exact path="/portfolio/home">
               <Home />
             </Route>
-            <Route path="/about-me">
+            <Route path="/portfolio/about-me">
               <About />
             </Route>
-            <Route path="/projects">
+            <Route path="/portfolio/projects">
               <Projects />
             </Route>
-            <Route path="/resume">
+            <Route path="/portfolio/resume">
               <Resume />
             </Route>
           </Switch>
