@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { BrowserRouter as Router, Switch, Redirect, Route, Link} from "react-router-dom"
+import { BrowserRouter as Router, Switch, HashRouter, Redirect, Route, Link} from "react-router-dom"
 import { Box, Typography, makeStyles, Menu, MenuItem, IconButton, useTheme, useMediaQuery } from '@material-ui/core'
 import { MenuRounded } from '@material-ui/icons'
 import '../App.css'
@@ -86,7 +86,7 @@ function NavBar() {
         }
 
         <div className={classes.scroll}>
-          <Switch>
+          <HashRouter>
             <Route exact path="/portfolio" render={() => (<Redirect exact from="/portfolio" to="/portfolio/home" />)} /> 
             <Route exact path="/portfolio/home">
               <Home />
@@ -100,7 +100,7 @@ function NavBar() {
             <Route path="/portfolio/resume">
               <Resume />
             </Route>
-          </Switch>
+          </HashRouter>
         </div>
       </Router>
     )
