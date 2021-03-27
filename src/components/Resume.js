@@ -8,7 +8,7 @@ function Resume() {
     const matchesExtraSmall = useMediaQuery(theme.breakpoints.down("sm"))
 
     return (
-        <div style={{ height: '93vh' }}>
+        <div style={{ height: '93vh', marginBottom: 125 }}>
             <iframe 
                 src= {matchesExtraSmall ? "Anush_Hambaryan_CV.pdf#zoom=45" : "Anush_Hambaryan_CV.pdf#zoom=90"}
                 width="100%" 

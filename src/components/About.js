@@ -6,7 +6,7 @@ function About() {
 
     return (
         <Container style={{ padding: 30 }}>
-            <Paper style={{ marginBottom: 100, padding: 20 }}>
+            <Paper style={{ marginBottom: 150, padding: 20 }}>
                 <Typography variant="body1" paragraph={true}>
                     Hello!
                 </Typography>

@@ -40,7 +40,7 @@ function Projects() {
                 </Grid>
             </Paper>
         
-            <Paper style={{ marginBottom: 100 }}>
+            <Paper style={{ marginBottom: 150 }}>
                 <Grid container style={{ padding: 20 }}>
                     <Grid item xs={12} sm={12} md={6} style={{ paddingRight: !matchesSmall && 30 }}>
                         <NetworkDescription />
