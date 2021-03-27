@@ -62,7 +62,7 @@ function NavBar() {
     }
 
     return (
-      <Router basename={Public.env.PUBLIC_URL}>
+      <Router basename="/portfolio">
         {matchesExtraSmall 
         ? 
           <>
