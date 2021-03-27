@@ -1,12 +1,14 @@
-import React from 'react'
-import {Typography, Container, Paper, Link, List, ListItem, ListItemAvatar } from '@material-ui/core'
-import {EmailOutlined, Phone} from '@material-ui/icons'
+import React from "react"
+import { Typography, Container, Paper, Link, List, ListItem, ListItemAvatar, useTheme, useMediaQuery } from "@material-ui/core"
+import { EmailOutlined, Phone } from "@material-ui/icons"
 
 function About() {
+    const theme = useTheme()
+    const matchesExtraSmall = useMediaQuery(theme.breakpoints.down("xs"))
 
     return (
         <Container style={{ padding: 30 }}>
-            <Paper style={{ marginBottom: 150, padding: 20 }}>
+            <Paper style={{ marginBottom: matchesExtraSmall ? 150 : 30, padding: 20 }}>
                 <Typography variant="body1" paragraph={true}>
                     Hello!
                 </Typography>

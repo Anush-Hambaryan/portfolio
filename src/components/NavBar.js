@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import { BrowserRouter as Router, HashRouter, Switch, Redirect, Route, Link } from "react-router-dom"
-import { Box, Typography, makeStyles, Menu, MenuItem, IconButton, useTheme, useMediaQuery } from '@material-ui/core'
-import { MenuRounded, } from '@material-ui/icons'
-import '../App.css'
+import { HashRouter, Switch, Redirect, Route, Link } from "react-router-dom"
+import { Box, Typography, makeStyles, Menu, MenuItem, IconButton, useTheme, useMediaQuery } from "@material-ui/core"
+import { MenuRounded } from "@material-ui/icons"
+import "../App.css"
 import Home from "./Home"
 import About from "./About"
 import Projects from "./Projects"
@@ -10,12 +10,12 @@ import Resume from "./Resume"
 
 const useStyles = makeStyles((theme) => ({
     link: {
-      fontWeight: 'bold',
+      fontWeight: "bold",
       textDecoration: "none",
       color: "white",
       marginLeft: theme.spacing(2),
       marginRight: theme.spacing(2),
-      '&:hover': {
+      "&:hover": {
         textDecoration: "underline",
         textUnderlinePosition: "under",
       }
@@ -25,23 +25,23 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "flex-end",
     },
     scroll: {
-      overflowY: 'auto', 
-      height: '96vh',
-      backgroundColor: '#C0C0C0',
+      overflowY: "auto", 
+      height: "96vh",
+      backgroundColor: "#C0C0C0",
       // https://stackoverflow.com/questions/53772429/material-ui-how-can-i-style-the-scrollbar-with-css-in-js
-      '&::-webkit-scrollbar': {
-        width: '0.6em',
+      "&::-webkit-scrollbar": {
+        width: "0.6em",
       },
-      '&::-webkit-scrollbar-track': {
-        backgroundColor: '#C0C0C0',
+      "&::-webkit-scrollbar-track": {
+        backgroundColor: "#C0C0C0",
       },
-      '&::-webkit-scrollbar-thumb': {
-        backgroundColor: 'black',
-        //borderRadius: 10,
+      "&::-webkit-scrollbar-thumb": {
+        backgroundColor: "white",
+        borderRadius: 15,
       }
     },
     iconBtn: {
-      backgroundColor: 'white', 
+      backgroundColor: "white", 
       marginLeft: 30, 
       marginTop: 10, 
       marginBottom: 10,
@@ -86,12 +86,13 @@ function NavBar() {
           </Box>
         }
 
-        <div className={classes.scroll}>
+       
           <Switch>
             <Route exact path="/" render={() => (<Redirect exact from="/" to="/home" />)} /> 
             <Route exact path="/home">
               <Home />
             </Route>
+            <div className={classes.scroll}>
             <Route path="/about-me">
               <About />
             </Route>
@@ -101,8 +102,8 @@ function NavBar() {
             <Route path="/resume">
               <Resume />
             </Route>
+            </div>
           </Switch>
-        </div>
       </HashRouter>
     )
   }

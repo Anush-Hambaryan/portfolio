@@ -1,5 +1,5 @@
-import React from 'react'
-import { Divider, Typography, Link} from '@material-ui/core'
+import React from "react"
+import { Divider, Typography, Link } from "@material-ui/core"
 
 function RealHomeDescription() {
 
@@ -11,7 +11,7 @@ function RealHomeDescription() {
         </Link>
       </Typography>
 
-      <Divider style={{ backgroundColor: 'grey', marginBottom: 10 }} />
+      <Divider style={{ backgroundColor: "grey", marginBottom: 10 }} />
 
       <Typography  variant="body2" align="justify" paragraph>
         I built this project from scratch to teach myself 
@@ -36,10 +36,10 @@ function RealHomeDescription() {
         Please visit the website <Link href="https://anushhambaryan.pythonanywhere.com/real-home">here</Link>.
         To get the full experience, register or sign in with the
         following credentials - {" "}
-        <Typography component="span" variant="body2" style={{ fontWeight: 'bold' }}>
+        <Typography component="span" variant="body2" style={{ fontWeight: "bold" }}>
           Username: anna
         </Typography>, {" "}
-        <Typography component="span" variant="body2" style={{ fontWeight: 'bold' }}>
+        <Typography component="span" variant="body2" style={{ fontWeight: "bold" }}>
           Password: anna2021
         </Typography>
       </Typography>
@@ -48,7 +48,7 @@ function RealHomeDescription() {
         The website can have glitches on Safari, please use Chrome!
       </Typography>
 
-      <Divider style={{ backgroundColor: 'grey', marginBottom: 10, marginTop: 10, height: 0.5 }} />
+      <Divider style={{ backgroundColor: "grey", marginBottom: 10, marginTop: 10, height: 0.5 }} />
         
       <Typography variant="body2">Frontend source code is available 
         {" "}<Link href="https://github.com/Anush-Hambaryan/Real-Home-Frontend">here</Link>.

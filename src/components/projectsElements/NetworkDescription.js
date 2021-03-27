@@ -1,5 +1,5 @@
-import React from 'react'
-import { Divider, Typography, Link} from '@material-ui/core'
+import React from "react"
+import { Divider, Typography, Link } from "@material-ui/core"
 
 function NetworkDescription() {
     return (
@@ -10,7 +10,7 @@ function NetworkDescription() {
             </Link>
           </Typography>
 
-          <Divider style={{ backgroundColor: 'grey', marginBottom: 10 }} /> 
+          <Divider style={{ backgroundColor: "grey", marginBottom: 10 }} /> 
 
           <Typography variant="body2" align="justify" paragraph>
             This was the final assignment for 
@@ -52,7 +52,7 @@ function NetworkDescription() {
           The website can malfunction on screen sizes smaller than 400px.
         </Typography>
           
-        <Divider style={{ backgroundColor: 'grey', marginBottom: 10, marginTop: 10, height: 0.5 }} />
+        <Divider style={{ backgroundColor: "grey", marginBottom: 10, marginTop: 10, height: 0.5 }} />
         
         <Typography style={{ marginBottom: 10 }} variant="body2">
           Source code is available 
