@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { BrowserRouter as Router, Switch, HashRouter, Redirect, Route, Link} from "react-router-dom"
+import { BrowserRouter as Router, Switch, Redirect, Route, Link} from "react-router-dom"
 import { Box, Typography, makeStyles, Menu, MenuItem, IconButton, useTheme, useMediaQuery } from '@material-ui/core'
-import { MenuRounded } from '@material-ui/icons'
+import { MenuRounded, Public } from '@material-ui/icons'
 import '../App.css'
 import Home from "./Home"
 import About from "./About"
@@ -62,7 +62,7 @@ function NavBar() {
     }
 
     return (
-      <Router>
+      <Router basename={public.env.PUBLIC_URL}>
         {matchesExtraSmall 
         ? 
           <>
@@ -70,37 +70,37 @@ function NavBar() {
               <MenuRounded />
             </IconButton>
             <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
-              <MenuItem dense onClick={handleClose} component={Link} to="/portfolio/home">Home</MenuItem>
-              <MenuItem dense onClick={handleClose} component={Link} to="/portfolio/about-me">About Me</MenuItem>
-              <MenuItem dense onClick={handleClose} component={Link} to="/portfolio/projects">Projects</MenuItem>
-              <MenuItem dense onClick={handleClose} component={Link} to="/portfolio/resume">Resume</MenuItem>
+              <MenuItem dense onClick={handleClose} component={Link} to="/home">Home</MenuItem>
+              <MenuItem dense onClick={handleClose} component={Link} to="/about-me">About Me</MenuItem>
+              <MenuItem dense onClick={handleClose} component={Link} to="/projects">Projects</MenuItem>
+              <MenuItem dense onClick={handleClose} component={Link} to="/resume">Resume</MenuItem>
             </Menu>
           </>
         :
           <Box p={2} className={classes.root}>
-            <Typography className={classes.link} variant="button" component={Link} to="/portfolio/home">Home</Typography>
-            <Typography className={classes.link} variant="button" component={Link} to="/portfolio/about-me">About Me</Typography>
-            <Typography className={classes.link} variant="button" component={Link} to="/portfolio/projects">Projects</Typography>
-            <Typography className={classes.link} style={{ marginRight: 100 }} variant="button" component={Link} to="/portfolio/resume">Resume</Typography>
+            <Typography className={classes.link} variant="button" component={Link} to="/home">Home</Typography>
+            <Typography className={classes.link} variant="button" component={Link} to="/about-me">About Me</Typography>
+            <Typography className={classes.link} variant="button" component={Link} to="/projects">Projects</Typography>
+            <Typography className={classes.link} style={{ marginRight: 100 }} variant="button" component={Link} to="/resume">Resume</Typography>
           </Box>
         }
 
         <div className={classes.scroll}>
-          <HashRouter>
-            <Route exact path="/portfolio" render={() => (<Redirect exact from="/portfolio" to="/portfolio/home" />)} /> 
-            <Route exact path="/portfolio/home">
+          <Switch>
+            <Route exact path="/" render={() => (<Redirect exact from="/" to="/home" />)} /> 
+            <Route exact path="/home">
               <Home />
             </Route>
-            <Route path="/portfolio/about-me">
+            <Route path="/about-me">
               <About />
             </Route>
-            <Route path="/portfolio/projects">
+            <Route path="/projects">
               <Projects />
             </Route>
-            <Route path="/portfolio/resume">
+            <Route path="/resume">
               <Resume />
             </Route>
-          </HashRouter>
+          </Switch>
         </div>
       </Router>
     )
