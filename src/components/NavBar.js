@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { BrowserRouter as Router, Switch, Redirect, Route, Link} from "react-router-dom"
+import { BrowserRouter as Router, HashRouter, Switch, Redirect, Route, Link} from "react-router-dom"
 import { Box, Typography, makeStyles, Menu, MenuItem, IconButton, useTheme, useMediaQuery } from '@material-ui/core'
 import { MenuRounded, Public } from '@material-ui/icons'
 import '../App.css'
@@ -62,7 +62,7 @@ function NavBar() {
     }
 
     return (
-      <Router basename="/portfolio">
+      <HashRouter basename="/portfolio">
         {matchesExtraSmall 
         ? 
           <>
@@ -102,7 +102,7 @@ function NavBar() {
             </Route>
           </Switch>
         </div>
-      </Router>
+      </HashRouter>
     )
   }
   
