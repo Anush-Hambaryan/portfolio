@@ -18,12 +18,13 @@ function NetworkDescription() {
             <Link href="https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript?index=product&queryID=6771395a6d47a7dd9140e9db5a7bd534&position=1">
               CS50's Web Programming with Python and JavaScript
             </Link>. 
-            I built everything except for the login and register functionality and the layout.html, 
+            I built everything except for the login and registration functionality and the layout.html, 
             which were already provided in the assignment source code. I used  
             {" "}
             <Link href="https://www.djangoproject.com/">
               Django
             </Link> 
+            {" "}
             for the backend and Vanilla JavaScript for the frontend.
           </Typography>
 
@@ -35,6 +36,7 @@ function NetworkDescription() {
             
           <Typography variant="body2" align="justify" paragraph>
             Please visit the website 
+            {" "}
             <Link href="https://network-anushhambaryan.pythonanywhere.com/">
               here
             </Link>. 
@@ -56,6 +58,7 @@ function NetworkDescription() {
         
         <Typography style={{ marginBottom: 10 }} variant="body2">
           Source code is available 
+          {" "}
           <Link href="https://github.com/Anush-Hambaryan/Network">
             here
           </Link>.
