@@ -13,7 +13,7 @@ function Home() {
                 paddingTop: 250,
                 color: 'white',
                 backgroundColor: 'black',
-                height: '61.5%',
+                height: '59vh',
             }}
         >
             <Typography variant="h2" style={{ paddingBottom: 20 }}>Anush Hambaryan</Typography>
