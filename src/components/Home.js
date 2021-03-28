@@ -11,12 +11,8 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 4.6,
     },
     grid: {
-        color: theme.palette.secondary.main, 
+        color: 'white',
         marginTop: 20,
-    },
-    box: {
-        marginLeft: 20,
-        color: theme.palette.secondary.main, 
     },
     skills: { 
         marginRight: 10, 
@@ -33,16 +29,24 @@ function Home() {
     const matchesSm = useMediaQuery(theme.breakpoints.down("sm"))
     const matchesXs = useMediaQuery(theme.breakpoints.down("xs"))
 
-    const technologies = ["JavaScript", "React", "Python", "Django", "Django Rest Framework", "SQL", "Git"]
+    const technologies = ["JavaScript", "React", "HTML", "CSS", "Python", "Django", "Django Rest Framework", "Flask", "SQL", "Git"]
 
     const renderTechnologies = () => {
         return (technologies.map((item, index) => {
             return (
                 <>
+                {
+                matchesSm ?
+                    <li style={{fontSize: 14, margin: 10}}>{item}</li>
+                : 
+                !matchesSm && (index !== technologies.length - 1) ?
+                    <>
+                        <Typography variant="body2">{item}</Typography>
+                        <Divider orientation="vertical" flexItem className={classes.divider}/>
+                    </>
+                : 
                     <Typography variant="body2">{item}</Typography>
-                    {!matchesSm && (index !== technologies.length - 1)
-                        &&
-                    <Divider orientation="vertical" flexItem className={classes.divider}/>}
+                }
                 </>
             )
         }))
@@ -51,27 +55,26 @@ function Home() {
     return ( 
         <Box id="home-box" style={{ 
                 paddingLeft: matchesXs ? 30 : matchesSm ? 50 : 100, 
-                paddingTop: matchesXs ? 100 : 200,
+                paddingTop: matchesXs ? 60 : matchesSm ? 100 : 200,
                 color: "white",
                 backgroundColor: "black",
             }}
         >
-            <Typography variant="h2" style={{ paddingBottom: 20 }}>Anush Hambaryan</Typography>
+            <Typography variant="h3" style={{ paddingBottom: 20 }}>Anush Hambaryan</Typography>
             <Typography>Aspiring software developer</Typography>
-                {!matchesSm 
-                    ? 
-                <Grid container alignItems="center" className={classes.grid}>
-                    <Typography variant="body2" component="span" className={classes.skills}>Technical skills:</Typography>
-                    {renderTechnologies()}
-                </Grid>
-                    :
-                <>
-                <Typography variant="body2" className={classes.skills}>Technical skills:</Typography>
-                <Box className={classes.box}>
-                    {renderTechnologies()}
-                </Box>
-                </>
-                }
+                {!matchesSm ? 
+                    <Grid container alignItems="center" className={classes.grid}>
+                        <Typography variant="body2" component="span" className={classes.skills}>Technical skills:</Typography>
+                        {renderTechnologies()}
+                    </Grid>
+                :
+                    <>
+                    <Typography variant="body2" className={classes.skills}>Technical skills:</Typography>
+                    <ul style={{ paddingLeft: 30}}>
+                        {renderTechnologies()}
+                    </ul>
+                    </>
+                }  
         </Box>
     )
 }

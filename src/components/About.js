@@ -9,15 +9,20 @@ function About() {
     return (
         <Container style={{ padding: 30 }}>
             <Paper style={{ marginBottom: matchesExtraSmall ? 150 : 30, padding: 20 }}>
-                <Typography variant="body1" paragraph={true}>
-                    Hello!
-                </Typography>
-                <Typography variant="body2" align="justify" paragraph={true}>
-                    Thank you for visiting my personal website. 
-                </Typography>
-                <Typography variant="body2" align="justify" paragraph={true}>
-                    I am a self-taught developer looking to transition into technology from the non-profit sector.
-                </Typography>
+                <div style={{ display: 'flex' }}>
+                    <div style={{ flexGrow: 1 }}>
+                    <Typography variant="body1" paragraph={true} >
+                        Hello!
+                    </Typography>
+                    <Typography variant="body2" paragraph={true}>
+                        Thank you for visiting my personal website. 
+                    </Typography>
+                    <Typography variant="body2" paragraph={true}>
+                        I am a self-taught developer looking to transition into technology from the non-profit sector.
+                    </Typography>
+                    </div>
+                <img src="IMG_5822_2.jpg" width="115px" height="115px" style={{ marginLeft: 15, borderRadius: '50%' }}/>
+                </div>
                 <Typography variant="body2" align="justify" paragraph={true}>
                     I wrote my first lines of code in R and STATA for quantitative courses that I took during my graduate studies in Public Policy.
                     It sparked my interest in programming!
