@@ -11,6 +11,7 @@ function Resume() {
     return (
         <div style={{ height: "93vh" }}>
             <iframe 
+                title="resume"
                 src= {matchesSmall ? "Anush_Hambaryan_CV.pdf#zoom=45" : "Anush_Hambaryan_CV.pdf#zoom=90"}
                 width="100%" 
                 height= {matchesExtraSmall ? "90%" : "100%"}

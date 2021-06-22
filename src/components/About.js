@@ -18,7 +18,7 @@ function About() {
                         Thank you for visiting my personal website. 
                     </Typography>
                     <Typography variant="body2" paragraph={true}>
-                        I am a self-taught developer looking to transition into technology from the non-profit sector.
+                        I am a software developer passionate about building both front-end and back-end functionality.
                     </Typography>
                     </div>
                 <img src="IMG_5822_2.jpg" width="115px" height="115px" style={{ marginLeft: 15, borderRadius: '50%' }}/>
@@ -45,10 +45,7 @@ function About() {
                     React and Django Rest Framework by building a Real Estate transactions platform from scratch.
                 </Typography>
                 <Typography variant="body2" align="justify" paragraph={true}>
-                    I think, I have reached a point in my self-teaching journey where I am ready to join a company and do 
-                    real-world work. I am looking forward to being a part of this innovative and empowering industry! 
-                    Please take a look at my projects and CV. If it seems that I could be a good fit for your company, 
-                    please get in touch, I will be grateful for an opportunity to interview!
+                    The skills that I built during my self-teaching journey helped me join AIKODA LLC where I contribute to the user-facing features of their SAAS solutions for the healthcare industry. 
                 </Typography>
                 <List dense style={{ marginTop: -15 }}>
                 <ListItem style={{ fontSize: 14 }}>

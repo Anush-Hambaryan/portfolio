@@ -29,7 +29,7 @@ function Home() {
     const matchesSm = useMediaQuery(theme.breakpoints.down("sm"))
     const matchesXs = useMediaQuery(theme.breakpoints.down("xs"))
 
-    const technologies = ["JavaScript", "React", "HTML", "CSS", "Python", "Django", "Django Rest Framework", "Flask", "SQL", "Git"]
+    const technologies = ["Python", "Django", "Django Rest Framework", "Flask", "SQL", "Git", "JavaScript", "React", "Angular", "Typescript", "HTML", "CSS"]
 
     const renderTechnologies = () => {
         return (technologies.map((item, index) => {
@@ -61,7 +61,7 @@ function Home() {
             }}
         >
             <Typography variant="h3" style={{ paddingBottom: 20 }}>Anush Hambaryan</Typography>
-            <Typography>Aspiring software developer</Typography>
+            <Typography>Software developer</Typography>
                 {!matchesSm ? 
                     <Grid container alignItems="center" className={classes.grid}>
                         <Typography variant="body2" component="span" className={classes.skills}>Technical skills:</Typography>

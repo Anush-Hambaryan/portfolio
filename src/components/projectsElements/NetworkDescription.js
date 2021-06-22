@@ -5,7 +5,7 @@ function NetworkDescription() {
     return (
       <div>
           <Typography  variant="button" style={{ fontSize: 20 }}>
-            <Link href="https://network-anushhambaryan.pythonanywhere.com/">
+            <Link href="https://anush-network.herokuapp.com/posts/all">
               Network
             </Link>
           </Typography>
