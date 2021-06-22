@@ -37,7 +37,7 @@ function NetworkDescription() {
           <Typography variant="body2" align="justify" paragraph>
             Please visit the website 
             {" "}
-            <Link href="https://network-anushhambaryan.pythonanywhere.com/">
+            <Link href="https://anush-network.herokuapp.com/posts/all">
               here
             </Link>. 
             To get the full experience, feel free to register or sign in with the
