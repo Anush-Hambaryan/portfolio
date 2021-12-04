@@ -1,6 +1,5 @@
 import React from "react"
-import { Typography, Container, Paper, Link, List, ListItem, ListItemAvatar, useTheme, useMediaQuery } from "@material-ui/core"
-import { EmailOutlined, Phone } from "@material-ui/icons"
+import { Typography, Container, Paper, Link, useTheme, useMediaQuery } from "@material-ui/core"
 
 function About() {
     const theme = useTheme()
@@ -49,20 +48,6 @@ function About() {
                     </Link>{" "}
                     from scratch. I have since been working for IT companies in Armenia contributing to the user-facing functionality of their products.
                 </Typography>
-                <List dense style={{ marginTop: -15 }}>
-                <ListItem style={{ fontSize: 14 }}>
-                    <ListItemAvatar>
-                        <EmailOutlined />
-                    </ListItemAvatar>
-                    anushhambaryan@gmail.com
-                </ListItem>
-                <ListItem style={{ fontSize: 14 }} >
-                    <ListItemAvatar >
-                        <Phone />
-                    </ListItemAvatar >
-                    +374 (93) 96-05-27
-                </ListItem>
-                </List>
             </Paper>
         </Container>
     )    

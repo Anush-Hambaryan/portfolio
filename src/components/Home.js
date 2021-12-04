@@ -1,5 +1,6 @@
 import React from "react"
-import { Typography, Box, useMediaQuery, useTheme, Divider, Grid, makeStyles } from "@material-ui/core"
+import { Typography, Box, useMediaQuery, useTheme, Divider, Grid, makeStyles, Link } from "@material-ui/core"
+import { EmailOutlined, Phone, GitHub, LinkedIn } from "@material-ui/icons"
 
 const useStyles = makeStyles((theme) => ({
     divider: {
@@ -20,7 +21,21 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("sm")]: {
             marginTop: 20, 
         }
+    },
+    footer: {
+        position: 'fixed',
+        bottom: 0,
+        width: '100%',
+        marginBottom: '15px',
+        alignItems: 'center',
+    },
+    contact: {
+        marginRight: 8, 
+        display: 'flex', 
+        alignItems: 'center',
+        fontSize: 9
     }
+
 }))
 
 function Home() {
@@ -53,14 +68,15 @@ function Home() {
     }
 
     return ( 
+        <div>
         <Box id="home-box" style={{ 
                 paddingLeft: matchesXs ? 30 : matchesSm ? 50 : 100, 
-                paddingTop: matchesXs ? 60 : matchesSm ? 100 : 200,
+                paddingTop: matchesXs ? 25 : matchesSm ? 100 : 200,
                 color: "white",
                 backgroundColor: "black",
             }}
         >
-            <Typography variant="h3" style={{ paddingBottom: 20 }}>Anush Hambaryan</Typography>
+            <Typography style={{ paddingBottom: 20, fontSize: matchesXs ? 28 : 40 }}>Anush Hambaryan</Typography>
             <Typography>Software Developer</Typography>
                 {!matchesSm ? 
                     <Grid container alignItems="center" className={classes.grid}>
@@ -76,6 +92,26 @@ function Home() {
                     </>
                 }  
         </Box>
+        <Grid container  className={classes.footer} justify="center">
+            <div className={classes.contact} >
+                <EmailOutlined style={{ marginRight: 3, fontSize: 16 }}/> 
+                anushhambaryan@gmail.com 
+            </div>
+
+            <div className={classes.contact}>
+                <Phone style={{ marginRight: 3, fontSize: 16 }} /> 
+                +374 (93) 96-05-27 
+            </div>
+
+            <Link href="https://github.com/Anush-Hambaryan" underline="none" color="inherit" style={{ marginRight: 8 }}>  
+                <GitHub style={{ fontSize: 16 }}  /> 
+            </Link>
+
+            <Link href="https://www.linkedin.com/in/anush-hambaryan-1ab8ab5b/" underline="none" color="inherit"> 
+                <LinkedIn style={{ fontSize: 18 }} />
+            </Link>
+        </Grid>
+    </div>
     )
 }
 
