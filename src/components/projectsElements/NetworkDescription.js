@@ -17,7 +17,7 @@ function NetworkDescription() {
             {" "}
             <Link href="https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript?index=product&queryID=6771395a6d47a7dd9140e9db5a7bd534&position=1">
               CS50's Web Programming with Python and JavaScript
-            </Link>. 
+            </Link> course that I took to learn the fundamentals of web development.
             I built everything except for the login and registration functionality and the layout.html, 
             which were already provided in the assignment source code. I used  
             {" "}

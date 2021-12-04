@@ -18,7 +18,7 @@ function About() {
                         Thank you for visiting my personal website. 
                     </Typography>
                     <Typography variant="body2" paragraph={true}>
-                        I am a software developer passionate about building both front-end and back-end functionality.
+                        I am a web developer passionate about building both front-end and back-end functionality.
                     </Typography>
                     </div>
                 <img src="IMG_5822_2.jpg" width="115px" height="115px" style={{ marginLeft: 15, borderRadius: '50%' }}/>
@@ -37,15 +37,17 @@ function About() {
                     These courses taught me the basics of programming, and 
                     offered me a rigorous introduction to languages and technologies like C, Python, Django, JavaScript, SQL, HTML, CSS, Git.
                     Most importantly, I realized that I thoroughly enjoy coding and working on technical challenges!  
-                    This experience broadened my perspective on how I could progress in my career. I used to see myself exclusively in the public 
+                </Typography>
+                <Typography variant="body2" align="justify" paragraph={true}>   
+                    Learning how to code broadened my perspective on how I could progress in my career. I used to see myself exclusively in the public 
                     sector doing work that could potentially make a difference in Armenia. But I came to realize that I love programming more than 
                     anything I have done in the past, and it could also be a powerful tool to make a tangible impact on peoples' lives.
-                    
-                    Once it was clear that switching into technology was going to be my way forward, I moved on to learning 
-                    React and Django Rest Framework by building a Real Estate transactions platform from scratch.
-                </Typography>
-                <Typography variant="body2" align="justify" paragraph={true}>
-                    The skills that I built during my self-teaching journey helped me join AIKODA LLC where I contribute to the user-facing features of their SAAS solutions for the healthcare industry. 
+                    Once it was clear that switching into technology was going to be my way forward, I moved on to teaching myself 
+                    React and Django Rest Framework by building a{" "}  
+                    <Link href="https://anushhambaryan.pythonanywhere.com/real-home">
+                        Real Estate transactions platform
+                    </Link>{" "}
+                    from scratch. I have since been working for IT companies in Armenia contributing to the user-facing functionality of their products.
                 </Typography>
                 <List dense style={{ marginTop: -15 }}>
                 <ListItem style={{ fontSize: 14 }}>
